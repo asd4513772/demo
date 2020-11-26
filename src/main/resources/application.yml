@@ -20,7 +20,5 @@ mybatis-plus:
 #server:
 server:
   port: 80
-  servlet:
-    context-path: /student
 
 

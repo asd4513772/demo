@@ -1,13 +1,15 @@
-package Service;
+package com.example.Service;
 
 import org.springframework.stereotype.Service;
-import pojo.Student;
+import com.example.pojo.Student;
 
 import java.util.List;
 @Service
 public interface StudentService {
 
-    List<Student> selectlimit(Integer x);
+    //List<Student> selectlimit(Integer x);
+
+    List<Student> selectlimit();
 
     Student selectById(Integer id);
 
@@ -15,7 +17,7 @@ public interface StudentService {
 
     void updateById(Integer id);
 
-    Student insertById(Student student);
+    void insertById(Student student);
 
 
 

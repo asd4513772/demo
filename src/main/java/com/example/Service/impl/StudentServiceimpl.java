@@ -1,20 +1,22 @@
-package Serviceimpl;
+package com.example.Service.impl;
 
-import Service.StudentService;
-import dao.StudentDao;
+import com.example.Service.StudentService;
+import com.example.dao.StudentDao;
 import org.springframework.beans.factory.annotation.Autowired;
-import pojo.Student;
+import com.example.pojo.Student;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class StudentServiceimpl implements StudentService {
     @Autowired
     private StudentDao studentDao;
 
 
     @Override
-    public List<Student> selectlimit(Integer x) {
-        return studentDao.selectlimit(x);
+    public List<Student> selectlimit() {
+        return studentDao.selectlimit(0);
     }
 
     @Override
@@ -33,8 +35,8 @@ public class StudentServiceimpl implements StudentService {
     }
 
     @Override
-    public Student insertById(Student student) {
-        return studentDao.insertById(student);
+    public void insertById(Student student) {
+        studentDao.insertById(student);
     }
 
 

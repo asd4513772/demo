@@ -1,0 +1,26 @@
+#�������ݿ�
+spring:
+  datasource:
+    username: admin
+    password: admin
+    url: jdbc:mysql://34.92.148.70/test?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+#mybatis-plus的配置
+# 配置mybatis
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-not-delete-value: 0
+      logic-delete-value: 1
+      logic-delete-field: deleted
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#server:
+server:
+  port: 80
+  servlet:
+    context-path: /student
+
+

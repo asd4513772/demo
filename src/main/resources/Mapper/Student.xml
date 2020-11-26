@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao">
+
+    <select id="selectlimit">
+        select * from student limit #{x},5
+    </select>
+
+    <delete id="deleteById">
+       delete from student where id=#{id}
+    </delete>
+
+    <update id="updateById">
+         update student
+        set
+        Name=#{Name},
+        Chinese=#{Chinese},
+        Math=#{Math},
+        English=#{English},
+        History=#{History}
+        where id=#{id}
+    </update>
+
+    <insert id="insertById">
+        insert into student(Name,Chinese,Math,English,History) value (#{Name},#{Chinese},#{Math},#{English},#{History})
+    </insert>
+
+
+</mapper>
+
+
+
+

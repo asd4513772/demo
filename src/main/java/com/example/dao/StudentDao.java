@@ -12,11 +12,14 @@ public interface StudentDao extends BaseMapper<Student> {
         //分页查询
         List<Student> selectlimit(@Param("x")  Integer x);
 
-        int deleteById(@Param("x")Integer x);
+        Student selectById(@Param("id") Integer id);
 
-        int updateById(@Param("id")Integer id);
+        int deleteById(@Param("id") int id);
 
-        int insertById(Student student);
+        int update(Student student);
+
+
+
 
 
 }

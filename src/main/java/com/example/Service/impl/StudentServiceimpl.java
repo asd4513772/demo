@@ -15,8 +15,8 @@ public class StudentServiceimpl implements StudentService {
 
 
     @Override
-    public List<Student> selectlimit() {
-        return studentDao.selectlimit(0);
+    public List<Student> selectlimit(Integer x) {
+        return studentDao.selectlimit(x);
     }
 
     @Override
@@ -25,18 +25,24 @@ public class StudentServiceimpl implements StudentService {
     }
 
     @Override
-    public void deleteById(Integer id) {
+    public void deleteById(int id) {
         studentDao.deleteById(id);
     }
 
     @Override
-    public void updateById(Integer id) {
-        studentDao.updateById(id);
+    public void update(Student student) {
+         studentDao.update(student);
     }
 
+    /*@Override
+    public void updateById(Integer id) {
+        Student stu=new Student(id,"李二",88.0,99.5,77.0,89.5);
+        studentDao.updateById(stu);
+    }*/
+
     @Override
-    public void insertById(Student student) {
-        studentDao.insertById(student);
+    public void insert(Student student) {
+        studentDao.insert(student);
     }
 
 

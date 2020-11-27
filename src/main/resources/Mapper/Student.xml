@@ -5,28 +5,23 @@
 <mapper namespace="com.example.dao.StudentDao">
 
     <select id="selectlimit"  resultType="com.example.pojo.Student">
-     select * from student limit #{x},5
-
+     select * from student limit #{x},3
     </select>
 
-    <delete id="deleteById">
-       delete from student where id=#{id}
+    <select id="selectById" resultType="com.example.pojo.Student">
+        select * from student where  id= #{id}
+            </select>
+
+    <delete id="deleteById" >
+       delete from student where id= #{id}
     </delete>
 
-    <update id="updateById">
-         update student
-        set
-        Name=#{Name},
-        Chinese=#{Chinese},
-        Math=#{Math},
-        English=#{English},
-        History=#{History}
-        where id=#{id}
+    <update id="update">
+        update student set name=#{name},chinese=#{chinese},math=#{math},english=#{english},history=#{history} where id=#{id}
     </update>
 
-    <insert id="insertById">
-        insert into student(Name,Chinese,Math,English,History) value (#{Name},#{Chinese},#{Math},#{English},#{History})
-    </insert>
+
+
 
 
 </mapper>

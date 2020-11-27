@@ -7,17 +7,17 @@ import java.util.List;
 @Service
 public interface StudentService {
 
-    //List<Student> selectlimit(Integer x);
 
-    List<Student> selectlimit();
+    List<Student> selectlimit(Integer x);
 
     Student selectById(Integer id);
 
-    void deleteById(Integer id);
+    void deleteById(int id);
 
-    void updateById(Integer id);
+    void update(Student student);
 
-    void insertById(Student student);
+    void insert(Student student);
+
 
 
 

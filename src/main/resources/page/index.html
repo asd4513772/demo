@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+>
+
+
+
+</head>
+<body>
+<div class="container">
+    <!--修改-->
+    <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >修改</button>-->
+    <div class="modal fade" id="exampleModal" >
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">修改</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span>&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="StudentName" class="col-form-label">Name:</label>
+                            <input type="text" class="form-control" id="StudentName">
+                        </div>
+                        <div class="form-group">
+                            <label for="Chinese" class="col-form-label">Chinese:</label>
+                            <input type="text" class="form-control" id="Chinese">
+                        </div>
+                        <div class="form-group">
+                            <label for="Math" class="col-form-label">Math:</label>
+                            <input type="text" class="form-control" id="Math">
+                        </div>
+                        <div class="form-group">
+                            <label for="History" class="col-form-label">History:</label>
+                            <input type="text" class="form-control" id="History">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">确认修改</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--确认删除-->
+    <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#delete" >删除</button>-->
+    <div class="modal" tabindex="-1" role="dialog" id="delete">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">删除</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>确认删除所有信息吗？</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--添加-->
+    <div class="modal fade" id="AddMsg" >
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel1">添加</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span>&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="AddName" class="col-form-label">Name:</label>
+                            <input type="text" class="form-control" id="AddName">
+                        </div>
+                        <div class="form-group">
+                            <label for="AddChinese" class="col-form-label">Chinese:</label>
+                            <input type="text" class="form-control" id="AddChinese">
+                        </div>
+                        <div class="form-group">
+                            <label for="AddMath" class="col-form-label">Math:</label>
+                            <input type="text" class="form-control" id="AddMath">
+                        </div>
+                        <div class="form-group">
+                            <label for="AddHistory" class="col-form-label">History:</label>
+                            <input type="text" class="form-control" id="AddHistory">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">确认添加</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--表格-->
+    <div class="card" style="margin-top: 5%">
+        <h3 style="text-align: center">table</h3>
+        <table class="table table-hover " style="text-align: center">
+            <thead class="card-header">
+            <tr>
+                <td>name</td>
+                <td>chinese</td>
+                <td>math</td>
+                <td>english</td>
+                <td>operation</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>tom</td>
+                <td>55</td>
+                <td>77</td>
+                <td>58</td>
+                <td>
+                    <button  class="btn btn-sm" data-toggle="modal" data-target="#exampleModal">修改</button>
+                    <button  class="btn btn-sm" data-toggle="modal" data-target="#delete">删除</button>
+                </td>
+            </tr>
+
+
+            </tbody>
+        </table>
+        <div class="card-footer" style="display: flex;justify-content: center">
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#AddMsg" >添加</button>
+        </div>
+
+    </div>
+
+    <!--分页-->
+
+    <nav aria-label="Page navigation example" style="display: flex;justify-content: center;margin-top: 2%">
+        <ul class="pagination" style="">
+            <li class="page-item"><a class="page-link" href="#">上一页</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">下一页</a></li>
+        </ul>
+    </nav>
+
+</div>
+
+
+
+
+<script src="../../../../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../../../../node_modules/popper.js/dist/popper.min.js"></script>
+<script src="../../../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script
+</body>
+</html>

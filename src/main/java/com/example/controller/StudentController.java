@@ -32,7 +32,7 @@ public class StudentController {
         studentService.deleteById(id);
     }
     //按照ID修改数据
-    /*@GetMapping("/updataById/{id}")//- -  注意看注解  restful风格的地址有{}  注解是PathVariable       这是restful风格的  地址 http://localhost/student/updataById/2
+    /*@GetMapping("/updataById/{id}")//注解  restful风格的地址有{}  注解是PathVariable restful风格 地址 http://localhost/student/updataById/2
     public void UpdateById(@PathVariable("id") Integer id){
         studentService.updateById(id);
     }*/

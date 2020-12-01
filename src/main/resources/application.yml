@@ -5,6 +5,9 @@ spring:
     password: admin
     url: jdbc:mysql://34.92.148.70/test?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
     driver-class-name: com.mysql.cj.jdbc.Driver
+  resources:
+    #    静态资源及文件上传目录
+    static-locations: classpath:/page
 
 #mybatis-plus的配置
 # 配置mybatis
@@ -15,10 +18,12 @@ mybatis-plus:
       logic-delete-value: 1
       logic-delete-field: deleted
   configuration:
+
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 #server:
 server:
   port: 80
+
 
 

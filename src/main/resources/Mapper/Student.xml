@@ -5,7 +5,7 @@
 <mapper namespace="com.example.dao.StudentDao">
 
     <select id="selectlimit"  resultType="com.example.pojo.Student">
-     select * from student limit #{x},3
+     select * from student limit #{page},#{pagenNnmber}
     </select>
 
     <select id="selectById" resultType="com.example.pojo.Student">
@@ -20,7 +20,9 @@
         update student set name=#{name},chinese=#{chinese},math=#{math},english=#{english},history=#{history} where id=#{id}
     </update>
 
-
+    <update id="insert">
+        insert into student (name,chinese,math,english,history) values (#{name},#{chinese},#{math},#{english},#{history})
+    </update>
 
 
 

@@ -8,7 +8,7 @@ import java.util.List;
 public interface StudentService {
 
 
-    List<Student> selectlimit(Integer x);
+    List<Student> selectlimit(Integer page,Integer pagenNnmber);
 
     Student selectById(Integer id);
 
@@ -17,9 +17,5 @@ public interface StudentService {
     void update(Student student);
 
     void insert(Student student);
-
-
-
-
 
 }

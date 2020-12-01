@@ -12,9 +12,20 @@
         $(document).ready(function () {
             $("button").click(function(){
                 console.log("click")
-                $.get("/student/selectById",function (data) {
+                $.get("http://192.168.10.111/student/selectById",function (data) {
                     console.log(data)
                 })
+
+
+
+
+
+
+
+
+
+
+
             });
         });
 

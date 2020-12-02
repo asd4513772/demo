@@ -15,8 +15,8 @@ public class StudentServiceimpl implements StudentService {
 
 
     @Override
-    public List<Student> selectlimit(Integer page,Integer pagenNnmber) {
-        return studentDao.selectlimit(page,pagenNnmber);
+    public List<Student> selectlimit(Integer page) {
+        return studentDao.selectlimit(page);
     }
 
     @Override

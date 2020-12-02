@@ -1,6 +1,6 @@
 package com.example.controller;
 
-import com.baomidou.mybatisplus.extension.api.R;
+
 import com.example.Service.StudentService;
 import com.example.pojo.Response;
 import org.apache.ibatis.annotations.Param;
@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.example.pojo.Student;
 
-import java.util.List;
+
 
 @RestController
 @RequestMapping("student")
@@ -29,10 +29,14 @@ public class StudentController {
     //分页查询，将数据按照分页显示在页面
     @GetMapping("/selectAll")
     @ResponseBody
-    public Response SelectAindll(Integer page,Integer pagenNnmber)
+    public Response SelectAindll(Integer page)
     {
         try {
-            return new Response(1,"成功",studentService.selectlimit((page-1)*pagenNnmber,pagenNnmber));
+            studentService.selectlimit(page);
+            r.code=1;
+            r.msg="成功";
+            r.data=studentService.selectlimit(page);
+            return r;
         } catch (Exception e) {
             e.printStackTrace();
             return new Response(0,e.getMessage());
@@ -69,7 +73,7 @@ public class StudentController {
             return r;
         } catch (Exception e) {
             e.printStackTrace();
-            // r.data= studentService.selectlimit(page,pagenNnmber);
+            r.data=e.getMessage();
             r.code=0;
             r.msg="失败";
             return r;
@@ -85,6 +89,7 @@ public class StudentController {
             return r;
         } catch (Exception e) {
             e.printStackTrace();
+            r.data=e.getMessage();
             r.code=0;
             r.msg="失败";
             return  r;
@@ -97,7 +102,7 @@ public class StudentController {
         studentService.updateById(id);
     }*/
 
-    @PostMapping("update")
+    @PostMapping("/update")
     public Response Update( @RequestBody Student student){
         try {
             studentService.update(student);
@@ -132,7 +137,13 @@ public class StudentController {
 
     }
 
-    @PostMapping("post")
+    @RequestMapping("/test")
+    public String index(){
+        return "index";
+    }
+
+
+    /*@PostMapping("post")
     public Response post(Student student){
         try {
             studentService.insert(student);
@@ -143,6 +154,6 @@ public class StudentController {
         } catch (Exception e) {
             return  new Response(0,e.getMessage());
         }
-    }
+    }*/
 
 }

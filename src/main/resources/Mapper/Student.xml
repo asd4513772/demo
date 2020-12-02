@@ -5,7 +5,7 @@
 <mapper namespace="com.example.dao.StudentDao">
 
     <select id="selectlimit"  resultType="com.example.pojo.Student">
-     select * from student limit #{page},#{pagenNnmber}
+     select * from student limit #{page},5
     </select>
 
     <select id="selectById" resultType="com.example.pojo.Student">

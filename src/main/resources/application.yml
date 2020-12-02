@@ -2,14 +2,20 @@
 spring:
   datasource:
     username: admin
-    password: admin
+    password: luokuang27149&*$()
     url: jdbc:mysql://34.92.148.70/test?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
     driver-class-name: com.mysql.cj.jdbc.Driver
-  resources:
-    #    静态资源及文件上传目录
-    static-locations: classpath:/page
+  thymeleaf:
+    cache: false
+    prefix: classpath:/static/page/
+    suffix: .html
 
-#mybatis-plus的配置
+
+
+
+
+
+
 # 配置mybatis
 mybatis-plus:
   global-config:

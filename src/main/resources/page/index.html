@@ -12,23 +12,25 @@
         $(document).ready(function () {
             $("button").click(function(){
                 console.log("click")
-                $.get("http://192.168.10.111/student/selectById",function (data) {
-                    console.log(data)
+                $.get("http://192.168.1.21:8080/",function (data) {
+                    console.log(data);
+
+                     // for (var i=0;i<data.length;i++){
+                         html+="<tr>"+
+                             "<td>"+data.name +"</td>"+
+                             // "<td>"+data.Chinese +"</td>"+
+                             // "<td>"+data.Math +"</td>"+
+                             // "<td>"+data.English +"</td>"+
+                             "<td>"+
+                                " <button  class='btn btn-sm' data-toggle='modal' data-target='#exampleModal'>修改</button>"+
+                                "<button  class='btn btn-sm' data-toggle='modal' data-target='#delete'>删除</button>"+
+                             "</td>"+
+                             "</tr>"
+                   // }
+
                 })
-
-
-
-
-
-
-
-
-
-
-
             });
         });
-
     </script>
 
 </head>

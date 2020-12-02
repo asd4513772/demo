@@ -8,7 +8,7 @@ import lombok.Data;
 @Data
 public class Student {
 
-    private   Integer id;   //主键
+    private  Integer id;   //主键
     private  String name; //名字
     private  Double chinese; //语文
     private  Double math;  //数学

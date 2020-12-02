@@ -29,10 +29,10 @@ public class StudentController {
     //分页查询，将数据按照分页显示在页面
     @GetMapping("/selectAll")
     @ResponseBody
-    public Response SelectAindll(Integer page,Integer pagenNnmber)
+    public Response SelectAindll(Integer page)
     {
         try {
-            return new Response(1,"成功",studentService.selectlimit((page-1)*pagenNnmber,pagenNnmber));
+            return new Response(1,"成功",studentService.selectlimit((page-1)*5));
         } catch (Exception e) {
             e.printStackTrace();
             return new Response(0,e.getMessage());

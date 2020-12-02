@@ -10,7 +10,7 @@ import java.util.List;
 @Mapper
 public interface StudentDao extends BaseMapper<Student> {
         //分页查询
-        List<Student> selectlimit(@Param("page")  Integer page, @Param("pagenNnmber") Integer pagenNnmber);
+        List<Student> selectlimit(@Param("templates")  Integer page);
 
         Student selectById(@Param("id") Integer id);
 

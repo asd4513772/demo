@@ -96,7 +96,7 @@ public class StudentController {
     public void UpdateById(@PathVariable("id") Integer id){
         studentService.updateById(id);
     }*/
-//修改數據
+
     @PostMapping("update")
     public Response Update( @RequestBody Student student){
         try {
@@ -110,6 +110,8 @@ public class StudentController {
             r.msg="失败";
             return  r;
         }
+
+
     }
 
     //新增数据
@@ -129,7 +131,7 @@ public class StudentController {
         }
 
     }
-//測試的
+
     @PostMapping("post")
     public Response post(Student student){
         try {

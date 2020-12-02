@@ -3,18 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>index</title>
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/popper.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script  src="../../../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../../../node_modules/popper.js/dist/umd/popper.js"></script>
+    <script  src="../../../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
 
     <script >
         $(document).ready(function () {
             $("button").click(function(){
                 console.log("click")
-                $.get("/student/selectById",function (data) {
+                $.get("http://192.168.10.111/student/selectById",function (data) {
                     console.log(data)
                 })
+
+
+
+
+
+
+
+
+
+
+
             });
         });
 

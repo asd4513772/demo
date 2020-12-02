@@ -29,7 +29,6 @@ mybatis-plus:
 
 #server:
 server:
-  port: 80
-
+  port: 8080
 
 

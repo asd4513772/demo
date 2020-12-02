@@ -12,6 +12,8 @@ import com.example.pojo.Student;
 
 @RestController
 @RequestMapping("student")
+//@CrossOrigin(origins = {"*","null"},allowCredentials="true")
+@CrossOrigin(origins = "*",maxAge = 3600)
 public class StudentController {
     @Autowired
     private StudentService studentService;
